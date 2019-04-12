@@ -1,12 +1,11 @@
-# WEB system
-- [ ] Replace "WEB system" with your system name
+# Nba stats system
 
 ## Description
-- [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+- [ ] This Web System is designed to show NBA stats of all players and information about games.
 
 ## Entity definition
-- [ ] Define the entity ("object" that will be manipulated) of WEB system
-- [ ] Entity should have a name
+- [ ] System's object is player
+- [ ] Each player has name.
 - [ ] Entity should have 3 mandatory attributes:
     - [ ] ID - depending on specific service this could be a number or string
     - [ ] Creation date - (if applicable for specific service) ISO 8601 format date string
@@ -16,8 +15,24 @@
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
 ## API definition
-- [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
-- [ ] Optionally define additional API methods that WEB system is going to expose
+The main thing this WEB system will get from API is all games and players.
+API has these methods (used in this WEB system):
+Get all players
+GET https://www.balldontlie.io/api/v1/players
+Get specific player
+GET https://www.balldontlie.io/api/v1/players/<ID>
+Get all games
+GET https://www.balldontlie.io/api/v1/games
+Get specific game
+GET https://www.balldontlie.io/api/v1/games/<ID>
+    
+- 400	Bad Request -- Your request is invalid.
+- 404	Not Found -- The specified resource could not be found.
+- 406	Not Acceptable -- You requested a format that isn't json.
+- 429	Too Many Requests -- Stop bombarding us.
+- 500	Internal Server Error -- We had a problem with our server. Try again later.
+- 503	Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+
 - [ ] API should have at least 4 methods
     - [ ] A method to return entity by ID. Should not have request body
     - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
