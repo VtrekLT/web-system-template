@@ -16,12 +16,12 @@
 - weight_pounds: (number(length=3)),
 
 ## API definition
-The main purpose of this Web System is to get information about players from NBA.
-API has these methods (used in this WEB system):
-Get all players ,
-GET https://www.balldontlie.io/api/v1/players ,
-Get specific player ,
-GET https://www.balldontlie.io/api/v1/players/<ID> ,
+- The main purpose of this Web System is to get information about players from NBA.
+- API has these methods (used in this WEB system):
+- [ ] Get all players
+- GET https://www.balldontlie.io/api/v1/players 
+- [ ] Get specific player 
+- GET https://www.balldontlie.io/api/v1/players/<ID> 
 
 - 400	Bad Request -- Your request is invalid.
 - 404	Not Found -- The specified resource could not be found.
