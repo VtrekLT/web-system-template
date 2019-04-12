@@ -1,31 +1,28 @@
 # Nba stats system
 
 ## Description
-- [ ] This Web System is designed to show NBA stats of all players and information about games.
+- [ ] This Web System is designed to show NBA stats of all players and information about them
 
 ## Entity definition
 - [ ] System's object is player
-- [ ] Each player has name.
-- [ ] Entity should have 3 mandatory attributes:
-    - [ ] ID - depending on specific service this could be a number or string
-    - [ ] Creation date - (if applicable for specific service) ISO 8601 format date string
-    - [ ] Modification date - (if applicable for specific service) ISO 8601 format date string
-- [ ] Entity should have at least 5 custom attributes
-    - [ ] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
-    - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
+- [ ] Each player has a name.
+
+- Player id: (number(length=1000)), 
+- first_name: (string(length=30)),
+- last_name: (string(length=30)),
+- position: (string(length=2)),
+- height_feet: (number(length=1)),
+- height_inches: (number(length=2)),
+- weight_pounds: (number(length=3)),
 
 ## API definition
-The main thing this WEB system will get from API is all games and players.
+The main purpose of this Web System is to get information about players from NBA.
 API has these methods (used in this WEB system):
 Get all players
 GET https://www.balldontlie.io/api/v1/players
 Get specific player
 GET https://www.balldontlie.io/api/v1/players/<ID>
-Get all games
-GET https://www.balldontlie.io/api/v1/games
-Get specific game
-GET https://www.balldontlie.io/api/v1/games/<ID>
-    
+
 - 400	Bad Request -- Your request is invalid.
 - 404	Not Found -- The specified resource could not be found.
 - 406	Not Acceptable -- You requested a format that isn't json.
@@ -33,15 +30,6 @@ GET https://www.balldontlie.io/api/v1/games/<ID>
 - 500	Internal Server Error -- We had a problem with our server. Try again later.
 - 503	Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
 
-- [ ] API should have at least 4 methods
-    - [ ] A method to return entity by ID. Should not have request body
-    - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
-        - [ ] Return only entities that match pattern in one of its attributes
-        - [ ] Return 10 entities starting provided index
-        - [ ] Return sorted entities by one of its attributes (both ascending and descending)
-        - [ ] Other (should be approved by Product Owner (PO))
-    - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
-    - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
 - [ ] Each method should have HTTP method defined
 - [ ] Each method should have URI defined (use {id} as entity ID placeholder)
 - [ ] Should return all 4xx errors in unified format. Define format using `joi` language
