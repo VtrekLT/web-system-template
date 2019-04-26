@@ -22,10 +22,10 @@
 - GET https://www.balldontlie.io/api/v1/players 
 - [ ] Get specific player 
 - GET https://www.balldontlie.io/api/v1/players/<ID> 
-- [ ] Like specific player
-- POST like: POST /api/v1/players/<ID>/like
-- [ ] Unlike specific player
-- DELETE like(unlike): DELETE /api/v1/players/<ID>/like
+- [ ] Like a specific player
+- POST like: POST players/<ID>/like
+- [ ] Unlike a specific player
+- DELETE like(unlike): DELETE players/<ID>/like
 
   
 - 400	Bad Request -- Your request is invalid.
