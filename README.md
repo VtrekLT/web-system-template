@@ -26,7 +26,7 @@
 - POST like: POST /api/v1/players/<ID>/like
 - [ ] Unlike specific player
 - DELETE like(unlike): DELETE /api/v1/players/<ID>/like
--
+
   
 - 400	Bad Request -- Your request is invalid.
 - 404	Not Found -- The specified resource could not be found.
