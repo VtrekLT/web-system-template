@@ -14,6 +14,8 @@
 - height_feet: (number(length=1)),
 - height_inches: (number(length=2)),
 - weight_pounds: (number(length=3)),
+- likes(number(length>0)), 
+- like_date(date(length=10)), 
 
 ## API definition
 - The main purpose of this Web System is to get information about players from NBA.
